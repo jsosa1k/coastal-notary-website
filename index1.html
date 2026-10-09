@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coastal Mobile Notary & Apostille — Savannah, GA | 24/7 Service</title>
+<meta name="description" content="24-hour mobile notary and apostille services serving Savannah, GA and the coastal region. Available anytime you need us.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --tide:#0e3b4c;
+    --tide-deep:#082a37;
+    --glass:#5aa6c9;
+    --glass-soft:#d6e9f5;
+    --sand:#e4f1f8;
+    --foam:#f6fafd;
+    --spartina:#e0b04a;
+    --ink:#12303b;
+    --muted:rgba(18,48,59,0.72);
+    --line:rgba(14,59,76,0.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--foam);color:var(--ink);font-family:'Karla',sans-serif;font-size:1.04rem;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.12;color:var(--tide);}
+  a{color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;scroll-behavior:auto !important;}}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,248,241,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1120px;margin:0 auto;padding:14px 28px;}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--tide);white-space:nowrap;}
+  .brand svg{width:34px;height:34px;flex-shrink:0;}
+  .header-contact{display:flex;gap:10px;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:700;font-size:0.92rem;text-decoration:none;border:2px solid transparent;transition:background .15s,transform .15s;white-space:nowrap;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn:focus-visible,a:focus-visible{outline:3px solid var(--spartina);outline-offset:2px;}
+  .btn-primary{background:var(--tide);color:var(--foam);}
+  .btn-primary:hover{background:var(--tide-deep);}
+  .btn-sun{background:var(--spartina);color:var(--tide-deep);}
+  .btn-sun:hover{background:#ecc069;}
+  .btn-ghost{border-color:var(--tide);color:var(--tide);}
+  .btn-ghost:hover{background:var(--tide);color:var(--foam);}
+  .btn-light{border-color:rgba(251,248,241,0.6);color:var(--foam);}
+  .btn-light:hover{background:rgba(251,248,241,0.14);}
+  .btn svg{width:16px;height:16px;}
+  @media (max-width:640px){.header-contact .btn-label{display:none;}.header-contact .btn{padding:10px 13px;}.brand{font-size:.92rem;white-space:normal;line-height:1.1;gap:8px;min-width:0;}.brand svg{width:28px;height:28px;}.header-row{padding:12px 16px;gap:10px;}}
+
+  /* Hero: sky, low sun, drifting waves */
+  .hero{position:relative;overflow:hidden;color:var(--foam);padding:84px 0 170px;
+    background:
+      radial-gradient(circle at 78% 72%, rgba(224,176,74,0.55) 0, rgba(224,176,74,0.18) 14%, transparent 34%),
+      linear-gradient(180deg, var(--tide-deep) 0%, var(--tide) 55%, #2b84b3 100%);}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;position:relative;z-index:2;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px;}.hero-badge{order:-1;display:flex;justify-content:center;}.mark{width:min(100%,340px);}.mark-sub{font-size:.88rem;letter-spacing:.22em;}.mark-sub2{font-size:.82rem;}}
+  .place{display:inline-flex;align-items:center;gap:8px;color:var(--glass-soft);font-weight:600;font-size:0.95rem;margin-bottom:18px;}
+  .place svg{width:16px;height:16px;}
+  .hero h1{font-size:clamp(2.4rem,5.2vw,3.7rem);color:var(--foam);max-width:14ch;}
+  .hero-sub{margin-top:20px;font-size:1.12rem;color:rgba(251,248,241,0.88);max-width:46ch;}
+  .hero-ctas{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-ctas .btn{padding:14px 26px;font-size:1rem;}
+  .hero-note{margin-top:24px;display:flex;align-items:center;gap:10px;font-size:0.92rem;color:var(--glass-soft);}
+  .pulse-dot{width:9px;height:9px;border-radius:50%;background:#8fe0b4;animation:pulse 2.4s infinite;flex-shrink:0;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(143,224,180,.55);}70%{box-shadow:0 0 0 9px rgba(143,224,180,0);}100%{box-shadow:0 0 0 0 rgba(143,224,180,0);}}
+
+  /* Logo mark */
+  .mark{width:min(100%,420px);display:flex;flex-direction:column;align-items:center;text-align:center;animation:settle 1.4s ease-out both;}
+  .mark-art{width:100%;height:auto;max-width:340px;}
+  .mark-name{font-family:'DM Serif Display',serif;font-size:clamp(2.5rem,5vw,3.3rem);letter-spacing:.07em;text-transform:uppercase;color:var(--foam);line-height:1;margin-top:4px;}
+  .mark-sub{display:flex;align-items:center;gap:14px;width:100%;margin-top:14px;font-weight:600;font-size:1.02rem;letter-spacing:.3em;text-transform:uppercase;color:#a9d4ec;justify-content:center;}
+  .mark-sub i{flex:1;height:1px;background:var(--spartina);max-width:60px;}
+  .mark-rule{display:flex;align-items:center;gap:10px;width:100%;margin-top:14px;}
+  .mark-rule b,.mark-star b{flex:1;height:1px;background:rgba(224,176,74,.8);}
+  .mark-rule em{width:8px;height:8px;border-radius:50%;background:var(--spartina);}
+  .mark-sub2{margin-top:12px;font-weight:600;font-size:.95rem;letter-spacing:.22em;text-transform:uppercase;color:var(--foam);}
+  .mark-sub2 span{color:#7cc0e6;margin-right:4px;}
+  .mark-star{display:flex;align-items:center;gap:12px;width:100%;margin-top:14px;}
+  .mark-star svg{width:22px;height:22px;flex-shrink:0;}
+  @keyframes settle{0%{transform:translateY(18px);opacity:0;}100%{transform:none;opacity:1;}}
+
+
+
+  .waves{position:absolute;left:0;right:0;bottom:-1px;height:130px;z-index:1;overflow:hidden;}
+  .wave{position:absolute;left:0;bottom:0;width:200%;height:100%;}
+  .wave.w1{animation:drift 26s linear infinite;opacity:.35;}
+  .wave.w2{animation:drift 38s linear infinite reverse;opacity:.6;height:78%;}
+  .wave.w3{animation:drift 52s linear infinite;height:52%;}
+  @keyframes drift{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* Info strip */
+  .strip{background:var(--sand);padding:8px 0 4px;}
+  .strip-row{display:grid;grid-template-columns:repeat(4,1fr);}
+  .strip-item{padding:22px 16px;text-align:center;border-left:1px solid rgba(14,59,76,0.18);}
+  .strip-item:first-child{border-left:none;}
+  .strip-item span{display:block;font-size:0.85rem;color:var(--muted);}
+  .strip-item strong{font-family:'DM Serif Display',serif;font-weight:400;font-size:1.25rem;color:var(--tide);}
+  @media (max-width:760px){.strip-row{grid-template-columns:1fr 1fr;}.strip-item:nth-child(3){border-left:none;}}
+
+  /* Sections */
+  section{padding:84px 0;}
+  .head{max-width:640px;margin-bottom:46px;}
+  .head h2{font-size:clamp(1.9rem,3.6vw,2.6rem);}
+  .head p{margin-top:12px;color:var(--muted);}
+
+  .services{background:var(--sand);padding-top:56px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  @media (max-width:860px){.grid{grid-template-columns:1fr;}}
+  .card{background:var(--foam);border-radius:22px;padding:34px 30px;border:1px solid var(--line);box-shadow:0 14px 30px rgba(14,59,76,0.1);}
+  .icon{width:52px;height:52px;border-radius:50%;background:var(--glass-soft);color:var(--tide);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+  .icon svg{width:26px;height:26px;}
+  .card h3{font-size:1.5rem;margin-bottom:10px;}
+  .card p{color:var(--muted);font-size:0.98rem;}
+  .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{background:var(--glass-soft);color:var(--tide);border-radius:999px;padding:5px 13px;font-size:0.84rem;font-weight:600;}
+  .note{margin-top:18px;padding:13px 16px;background:rgba(90,166,201,0.16);border-left:4px solid var(--glass);border-radius:0 12px 12px 0;font-size:0.92rem;}
+  .note strong{display:block;color:var(--tide);margin-bottom:2px;}
+  .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:var(--tide);color:var(--foam);border-radius:999px;padding:5px 14px;font-size:0.84rem;font-weight:600;}
+
+  .area{background:var(--foam);}
+  .area-in{max-width:660px;margin:0 auto;text-align:center;}
+  .area-in p{margin-top:12px;color:var(--muted);}
+  .area-list{list-style:none;margin:26px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:4px 28px;max-width:470px;text-align:left;}
+  .area-list li{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dotted rgba(14,59,76,0.28);}
+  .area-list li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--glass);flex-shrink:0;}
+
+  /* Contact, with a wave edge */
+  .contact{position:relative;background:var(--tide);color:var(--foam);padding-top:130px;}
+  .contact-edge{position:absolute;top:-1px;left:0;width:100%;height:70px;display:block;}
+  .contact-in{display:grid;grid-template-columns:1.1fr 0.9fr;gap:52px;align-items:center;}
+  @media (max-width:860px){.contact-in{grid-template-columns:1fr;}}
+  .contact h2{color:var(--foam);font-size:clamp(1.9rem,3.6vw,2.7rem);}
+  .contact p{margin-top:14px;color:rgba(251,248,241,0.82);max-width:44ch;}
+  .panel{background:rgba(251,248,241,0.08);border:1px solid rgba(251,248,241,0.22);border-radius:22px;padding:30px;}
+  .line{display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid rgba(251,248,241,0.18);text-decoration:none;}
+  .line:last-of-type{border-bottom:none;}
+  .line-icon{width:44px;height:44px;border-radius:50%;background:var(--spartina);color:var(--tide-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .line-icon svg{width:20px;height:20px;}
+  .line small{display:block;font-size:0.82rem;color:var(--glass-soft);}
+  .line b{font-family:'DM Serif Display',serif;font-weight:400;font-size:1.25rem;word-break:break-word;}
+  .avail{margin-top:18px;display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--glass-soft);}
+
+  footer{background:var(--tide-deep);padding:28px 0;color:rgba(251,248,241,0.7);font-size:0.9rem;}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .foot .fb{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--foam);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <div class="brand">
+      <svg viewBox="0 0 40 40" fill="none" stroke="#0e3b4c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="9" r="3.2"/><path d="M20 12.2V33M13 19h14M9 26c0 5 5 8 11 8s11-3 11-8M9 26l-3 3M31 26l3 3"/></svg>
+      <span>Coastal Mobile Notary &amp; Apostille</span>
+    </div>
+    <div class="header-contact">
+      <a class="btn btn-ghost" href="mailto:dianam084@yahoo.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l8 7 8-7M4 6v12h16V6"/></svg>
+        <span class="btn-label">Email</span>
+      </a>
+      <a class="btn btn-primary" href="tel:9122572555">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="btn-label">912-257-2555</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:170px;">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="place">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Savannah, GA &amp; the Coastal Empire
+      </span>
+      <h1>Notarized, apostilled, and signed — any hour, at your door.</h1>
+      <p class="hero-sub">Coastal Mobile Notary &amp; Apostille brings a notary directly to your home, office, hospital room, or closing table — day or night.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-sun" href="tel:9122572555">Call 912-257-2555</a>
+        <a class="btn btn-light" href="mailto:dianam084@yahoo.com">Email dianam084@yahoo.com</a>
+      </div>
+      <div class="hero-note"><span class="pulse-dot"></span>Available now — 24 hours, 7 days a week</div>
+    </div>
+    <div class="hero-badge">
+      <div class="mark" role="img" aria-label="Coastal Mobile Notary &amp; Apostille Services">
+        <svg class="mark-art" viewBox="0 0 300 220" fill="none" aria-hidden="true">
+          <circle cx="150" cy="100" r="82" stroke="#e0b04a" stroke-width="3"/>
+          <path d="M82 58A88 88 0 0 1 200 32" stroke="#e0b04a" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+          <text x="104" y="150" font-family="'Great Vibes',cursive" font-size="150" fill="#f6fafd">C</text>
+          <path d="M236 30C258 74 232 124 192 150C184 108 202 66 236 30Z" fill="#d6e9f5"/>
+          <path d="M236 30Q206 92 192 148" stroke="#e0b04a" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M226 52l-14 6M222 66l-18 7M216 82l-20 6M210 98l-20 5M204 114l-16 4M230 58l8 10M222 78l12 8M214 96l12 8" stroke="#2b84b3" stroke-width="1.4" stroke-linecap="round" opacity=".75"/>
+          <path d="M186 146l11 5-14 22z" fill="#e0b04a"/>
+          <path d="M26 172C74 142 118 178 170 166C208 158 238 150 276 162C236 174 206 184 164 186C112 188 70 160 26 172Z" fill="#5aa6c9"/>
+          <path d="M44 186C86 164 122 192 168 190C200 188 224 182 250 176C222 196 190 204 156 204C112 204 84 180 44 186Z" fill="#b6d9ee"/>
+          <path d="M196 170Q236 164 282 176" stroke="#f6fafd" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="mark-name">Coastal</span>
+        <span class="mark-sub"><i></i>Mobile Notary<i></i></span>
+        <span class="mark-rule"><b></b><em></em><b></b></span>
+        <span class="mark-sub2"><span>&amp;</span> Apostille Services</span>
+        <span class="mark-star"><b></b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l2.2 8.8L23 12l-8.8 2.2L12 23l-2.2-8.8L1 12l8.8-2.2z" fill="#e0b04a"/></svg><b></b></span>
+      </div>
+    </div>
+  </div>
+  <div class="waves" aria-hidden="true">
+    <svg class="wave w1" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 60 Q180 10 360 60 T720 60 T1080 60 T1440 60 V120 H0Z" fill="#5aa6c9"/></svg>
+    <svg class="wave w2" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 60 Q180 100 360 60 T720 60 T1080 60 T1440 60 V120 H0Z" fill="#b6d9ee"/></svg>
+    <svg class="wave w3" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0 50 Q180 10 360 50 T720 50 T1080 50 T1440 50 V120 H0Z" fill="#e4f1f8"/></svg>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap strip-row">
+    <div class="strip-item"><span>Availability</span><strong>24 / 7</strong></div>
+    <div class="strip-item"><span>Where we go</span><strong>We Come To You</strong></div>
+    <div class="strip-item"><span>On the road</span><strong>Multi-Year Experience</strong></div>
+    <div class="strip-item"><span>Languages</span><strong>English &amp; Spanish</strong></div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>Two ways we get your documents where they need to go.</h2>
+      <p>Whether it's a signature tonight or a document bound for another country, we handle it with the same care and the same seal.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-4z"/><path d="M9 12.5l2 2 4-4.5"/></svg></div>
+        <h3>24-Hour Mobile Notary</h3>
+        <p>With over 10 years in the industry, we've built our name on getting notarizations done right the first time — loan signings, powers of attorney, affidavits, wills, and general documents, wherever you are in the Savannah area, any hour of the day or night.</p>
+        <div class="tags"><span class="tag">Loan signings</span><span class="tag">POA</span><span class="tag">Affidavits</span></div>
+        <div class="note"><strong>Georgia law</strong>Georgia does not permit remote or online notarization. Every signing must be done in person, with the signer present and a valid photo ID in hand.</div>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Apostille Services</h3>
+        <p>Our team works closely with each client to walk their documents through the apostille process, from initial review to final certification, so they're accepted abroad without a hitch.</p>
+        <div class="tags"><span class="tag">Vital records</span><span class="tag">Adoption docs</span><span class="tag">Corporate docs</span></div>
+        <div class="note"><strong>How timing works</strong>Every apostille has to be processed through the Georgia Secretary of State's office in Atlanta, so turnaround time — and price — depends on how quickly you need it back.</div>
+        <div class="chips"><span class="chip">Same day</span><span class="chip">Next day</span><span class="chip">4 day</span><span class="chip">Up to 14 day</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap area-in">
+    <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem);">Based in Savannah. At home across the Coastal Empire.</h2>
+    <p>We travel throughout Savannah and the surrounding counties. Not sure if you're in range? Call us — if we can't come to you, we'll tell you straight.</p>
+    <ul class="area-list">
+      <li>Savannah</li><li>Pooler</li><li>Richmond Hill</li><li>Garden City</li>
+      <li>Port Wentworth</li><li>Tybee Island</li><li>Bloomingdale</li><li>Surrounding counties</li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <svg class="contact-edge" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V30 Q1260 70 1080 30 T720 30 T360 30 T0 30Z" fill="#f6fafd"/></svg>
+  <div class="wrap contact-in">
+    <div>
+      <h2>Ready when you are — any hour.</h2>
+      <p>Call for the fastest response, or send an email with your document details and we'll get right back to you.</p>
+    </div>
+    <div class="panel">
+      <a class="line" href="tel:9122572555">
+        <span class="line-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <span><small>Call or text</small><b>912-257-2555</b></span>
+      </a>
+      <a class="line" href="mailto:dianam084@yahoo.com">
+        <span class="line-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l8 7 8-7M4 6v12h16V6"/></svg></span>
+        <span><small>Email</small><b style="font-size:1.1rem;">dianam084@yahoo.com</b></span>
+      </a>
+      <div class="avail"><span class="pulse-dot"></span>Open 24 hours — every day of the week</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="fb">Coastal Mobile Notary &amp; Apostille</span>
+    <span>Savannah, GA &amp; the Coastal Empire</span>
+    <span>912-257-2555 · dianam084@yahoo.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
